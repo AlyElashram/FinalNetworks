@@ -5,6 +5,7 @@ const { nextTick } = require('process');
 var app = express();
 var fs=require('fs');
 var session=require('express-session');
+var port = process.env.PORT || 3000;
 
 
 
@@ -408,7 +409,7 @@ app.use(session({
 // returns 3 if username doesnt exist 2 if password is incorrect and 1 if they match
 
 
-app.listen(3000);
+app.listen(port);
 
 
 
