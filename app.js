@@ -5,7 +5,7 @@ const { nextTick } = require('process');
 var app = express();
 var fs=require('fs');
 var session=require('express-session');
-var port = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 
 
 
@@ -30,7 +30,7 @@ app.use(session({
 
     //Get Request For main Page
     app.get('/',function(req,res){
-      res.render('Login',{error:""});
+      res.render('login',{error:""});
     });
      
     //Post Request for login Main Page
