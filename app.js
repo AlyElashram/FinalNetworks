@@ -237,7 +237,8 @@ app.use(session({
       app.post('/register',function(req,res){
       var x=req.body.username;
       var y=req.body.password;
-      var file=fs.readFileSync('users.Json');
+      
+      var file=fs.readFileSync('users.json');
       if(x!='' && y!=''){
         if(check_username_exists(x)){
           console.log("Name already exists");
